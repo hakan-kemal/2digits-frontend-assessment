@@ -37,8 +37,8 @@ importers:
         specifier: ^2.7.0
         version: 2.7.0(@babel/core@7.24.7)(@types/node@20.16.5)(eslint@9.10.0(jiti@1.21.0))(graphql@16.9.0)(jiti@1.21.0)(tailwindcss@3.4.10)(typescript@5.6.2)
       '@2digits/prettier-config':
-        specifier: ^2.2.7
-        version: 2.2.7(prettier@3.3.3)
+        specifier: ^2.3.0
+        version: 2.3.0(prettier@3.3.3)
       '@2digits/tsconfig':
         specifier: ^0.6.0
         version: 0.6.0(typescript@5.6.2)
@@ -90,9 +90,6 @@ importers:
 
 packages:
 
-  '@2digits/constants@0.2.5':
-    resolution: {integrity: sha512-CHmsQ+UiiKp8vBU/VL283oJ1yXSt/ly8Kyeyei63yW1UWzFw33isWg76ZjWI8E9dsKYweox3f0dIy/qN5SW0oQ==}
-
   '@2digits/constants@0.3.0':
     resolution: {integrity: sha512-SeAsvuygatMVDIwTbea+TzndPiauEyWWBHSzlG+vjJBkyI+9uSzcXCYXHv3wYBTIaDeaLTh9H7Na1l8gFRi+2g==}
 
@@ -102,8 +99,8 @@ packages:
   '@2digits/eslint-plugin@2.3.0':
     resolution: {integrity: sha512-Kuj6IewykJYfc9uRM7xOrUWzVnaqom1BiJ5kWe0pL+TkicfL6QQhPkURcibu2slh9X8qP8u4ZOkYn3fK7CQDzQ==}
 
-  '@2digits/prettier-config@2.2.7':
-    resolution: {integrity: sha512-8/Ll89c6PTn+Y4Z6zVUzyn09Hec2wSGhSztayuS34SB9/IUdVF3aTgkbr1DlhqcQnbnQ6ycEV8MykvANoc6YeQ==}
+  '@2digits/prettier-config@2.3.0':
+    resolution: {integrity: sha512-8mHVp0qFdNgBkVMlOn+2B4eztDIsPT4Vz/1ObTPf+xijvAkOibpdrzbFjVU3BHbVKiN+SM5PgptbykA6AnCg5g==}
     peerDependencies:
       prettier: 3.3.3
 
@@ -3803,8 +3800,6 @@ packages:
 
 snapshots:
 
-  '@2digits/constants@0.2.5': {}
-
   '@2digits/constants@0.3.0': {}
 
   '@2digits/eslint-config@2.7.0(@babel/core@7.24.7)(@types/node@20.16.5)(eslint@9.10.0(jiti@1.21.0))(graphql@16.9.0)(jiti@1.21.0)(tailwindcss@3.4.10)(typescript@5.6.2)':
@@ -3861,9 +3856,9 @@ snapshots:
       - supports-color
       - typescript
 
-  '@2digits/prettier-config@2.2.7(prettier@3.3.3)':
+  '@2digits/prettier-config@2.3.0(prettier@3.3.3)':
     dependencies:
-      '@2digits/constants': 0.2.5
+      '@2digits/constants': 0.3.0
       '@ianvs/prettier-plugin-sort-imports': 4.3.1(prettier@3.3.3)
       local-pkg: 0.5.0
       prettier: 3.3.3
