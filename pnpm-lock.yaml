@@ -31,11 +31,11 @@ importers:
         version: 0.0.1
       tailwind-variants:
         specifier: ^0.2.1
-        version: 0.2.1(tailwindcss@3.4.11)
+        version: 0.2.1(tailwindcss@3.4.12)
     devDependencies:
       '@2digits/eslint-config':
         specifier: ^2.7.0
-        version: 2.7.0(@babel/core@7.24.7)(@types/node@20.16.5)(eslint@9.10.0(jiti@1.21.0))(graphql@16.9.0)(jiti@1.21.0)(tailwindcss@3.4.11)(typescript@5.6.2)
+        version: 2.7.0(@babel/core@7.24.7)(@types/node@20.16.5)(eslint@9.10.0(jiti@1.21.0))(graphql@16.9.0)(jiti@1.21.0)(tailwindcss@3.4.12)(typescript@5.6.2)
       '@2digits/prettier-config':
         specifier: ^2.3.0
         version: 2.3.0(prettier@3.3.3)
@@ -79,8 +79,8 @@ importers:
         specifier: ^3.3.3
         version: 3.3.3
       tailwindcss:
-        specifier: ^3.4.11
-        version: 3.4.11
+        specifier: ^3.4.12
+        version: 3.4.12
       turbo:
         specifier: ^2.1.2
         version: 2.1.2
@@ -3436,8 +3436,8 @@ packages:
     peerDependencies:
       tailwindcss: '*'
 
-  tailwindcss@3.4.11:
-    resolution: {integrity: sha512-qhEuBcLemjSJk5ajccN9xJFtM/h0AVCPaA6C92jNP+M2J8kX+eMJHI7R2HFKUvvAsMpcfLILMCFYSeDwpMmlUg==}
+  tailwindcss@3.4.12:
+    resolution: {integrity: sha512-Htf/gHj2+soPb9UayUNci/Ja3d8pTmu9ONTfh4QY8r3MATTZOzmv6UYWF7ZwikEIC8okpfqmGqrmDehua8mF8w==}
     engines: {node: '>=14.0.0'}
     hasBin: true
 
@@ -3805,7 +3805,7 @@ snapshots:
 
   '@2digits/constants@0.3.0': {}
 
-  '@2digits/eslint-config@2.7.0(@babel/core@7.24.7)(@types/node@20.16.5)(eslint@9.10.0(jiti@1.21.0))(graphql@16.9.0)(jiti@1.21.0)(tailwindcss@3.4.11)(typescript@5.6.2)':
+  '@2digits/eslint-config@2.7.0(@babel/core@7.24.7)(@types/node@20.16.5)(eslint@9.10.0(jiti@1.21.0))(graphql@16.9.0)(jiti@1.21.0)(tailwindcss@3.4.12)(typescript@5.6.2)':
     dependencies:
       '@2digits/constants': 0.3.0
       '@2digits/eslint-plugin': 2.3.0(jiti@1.21.0)(typescript@5.6.2)
@@ -3827,7 +3827,7 @@ snapshots:
       eslint-plugin-react-hooks: 4.6.2(eslint@9.10.0(jiti@1.21.0))
       eslint-plugin-sonarjs: 1.0.4(eslint@9.10.0(jiti@1.21.0))
       eslint-plugin-storybook: 0.8.0(eslint@9.10.0(jiti@1.21.0))(typescript@5.6.2)
-      eslint-plugin-tailwindcss: 3.17.4(tailwindcss@3.4.11)
+      eslint-plugin-tailwindcss: 3.17.4(tailwindcss@3.4.12)
       eslint-plugin-turbo: 2.1.1(eslint@9.10.0(jiti@1.21.0))
       eslint-plugin-unicorn: 55.0.0(eslint@9.10.0(jiti@1.21.0))
       find-up: 7.0.0
@@ -3932,7 +3932,7 @@ snapshots:
   '@babel/code-frame@7.24.7':
     dependencies:
       '@babel/highlight': 7.24.7
-      picocolors: 1.0.1
+      picocolors: 1.1.0
 
   '@babel/compat-data@7.24.7': {}
 
@@ -6423,11 +6423,11 @@ snapshots:
       - supports-color
       - typescript
 
-  eslint-plugin-tailwindcss@3.17.4(tailwindcss@3.4.11):
+  eslint-plugin-tailwindcss@3.17.4(tailwindcss@3.4.12):
     dependencies:
       fast-glob: 3.3.2
       postcss: 8.4.47
-      tailwindcss: 3.4.11
+      tailwindcss: 3.4.12
 
   eslint-plugin-turbo@2.1.1(eslint@9.10.0(jiti@1.21.0)):
     dependencies:
@@ -8139,12 +8139,12 @@ snapshots:
     dependencies:
       '@babel/runtime': 7.23.9
 
-  tailwind-variants@0.2.1(tailwindcss@3.4.11):
+  tailwind-variants@0.2.1(tailwindcss@3.4.12):
     dependencies:
       tailwind-merge: 2.2.1
-      tailwindcss: 3.4.11
+      tailwindcss: 3.4.12
 
-  tailwindcss@3.4.11:
+  tailwindcss@3.4.12:
     dependencies:
       '@alloc/quick-lru': 5.2.0
       arg: 5.0.2
@@ -8159,7 +8159,7 @@ snapshots:
       micromatch: 4.0.5
       normalize-path: 3.0.0
       object-hash: 3.0.0
-      picocolors: 1.0.1
+      picocolors: 1.1.0
       postcss: 8.4.47
       postcss-import: 15.1.0(postcss@8.4.47)
       postcss-js: 4.0.1(postcss@8.4.47)
@@ -8353,7 +8353,7 @@ snapshots:
     dependencies:
       browserslist: 4.23.3
       escalade: 3.1.2
-      picocolors: 1.0.1
+      picocolors: 1.1.0
 
   upper-case-first@2.0.2:
     dependencies:
