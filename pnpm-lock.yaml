@@ -37,8 +37,8 @@ importers:
         specifier: ^2.7.6
         version: 2.7.6(@babel/core@7.24.7)(@types/node@20.16.11)(eslint@9.12.0(jiti@1.21.0))(graphql@16.9.0)(jiti@1.21.0)(tailwindcss@3.4.13)(typescript@5.6.3)
       '@2digits/prettier-config':
-        specifier: ^2.3.3
-        version: 2.3.3(prettier@3.3.3)
+        specifier: ^2.3.4
+        version: 2.3.4(prettier@3.3.3)
       '@2digits/tsconfig':
         specifier: ^0.6.1
         version: 0.6.1(typescript@5.6.3)
@@ -99,8 +99,8 @@ packages:
   '@2digits/eslint-plugin@2.3.5':
     resolution: {integrity: sha512-W5ki4kg0thk2japxSdFB4hOux0u79h/k0NbhuYMnf4H/2oGUYFQtIVLW43mzCho6Bb9RudI0Rn/z1f52vgHROA==}
 
-  '@2digits/prettier-config@2.3.3':
-    resolution: {integrity: sha512-c0hHs1AQdNWe3kNisWrKDTZ+WoZlrNM/Cz9p14tHn2pyHvu/y4BT/SV1MPkAld5awhpf8vK/BHri/dZjCmxlDw==}
+  '@2digits/prettier-config@2.3.4':
+    resolution: {integrity: sha512-2Z1CtoigmQtOoWpJm0SWXTfzg7gWFbwNHkkeqPCx/fizjkv92bLsqyCI9ZQjkNw2ISCMLc/JzTcPvWdSQOzTHQ==}
     peerDependencies:
       prettier: 3.3.3
 
@@ -3895,7 +3895,7 @@ snapshots:
       - supports-color
       - typescript
 
-  '@2digits/prettier-config@2.3.3(prettier@3.3.3)':
+  '@2digits/prettier-config@2.3.4(prettier@3.3.3)':
     dependencies:
       '@2digits/constants': 0.3.2
       '@ianvs/prettier-plugin-sort-imports': 4.3.1(prettier@3.3.3)
