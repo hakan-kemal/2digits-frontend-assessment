@@ -37,8 +37,8 @@ importers:
         specifier: ^2.9.7
         version: 2.9.7(@babel/core@7.24.7)(@types/node@20.17.6)(eslint@9.13.0(jiti@1.21.0))(graphql@16.9.0)(jiti@1.21.0)(tailwindcss@3.4.14)(typescript@5.6.3)
       '@2digits/prettier-config':
-        specifier: ^2.4.1
-        version: 2.4.1(prettier@3.3.3)
+        specifier: ^2.5.0
+        version: 2.5.0(prettier@3.3.3)
       '@2digits/tsconfig':
         specifier: ^0.6.1
         version: 0.6.1(typescript@5.6.3)
@@ -99,8 +99,8 @@ packages:
   '@2digits/eslint-plugin@2.3.11':
     resolution: {integrity: sha512-t0Mq7CEkiMF457JSkKbrfZ7GX9p3aaUhQy6HZB8O55A5TxhJ8pW6rhwbH/zJYN4vC6UCS/62xUP/kvQAB5qthA==}
 
-  '@2digits/prettier-config@2.4.1':
-    resolution: {integrity: sha512-koqH4s7o+hP5GQ2hFNKd1xOJqszcTCydeSSWZ3Ntntc8fcprJpmxRBIS0U+0swi1eLQA3NMQY5aqIPtIbNKsDw==}
+  '@2digits/prettier-config@2.5.0':
+    resolution: {integrity: sha512-vCwhZbWkYl9rRAKc0gRb++bJzWiQtBTyjDJ0I78t25yZLuOhsXZfzUcb4nYVvKAWz+tJfdrVITYseIFCiZQ1Ng==}
     peerDependencies:
       prettier: 3.3.3
 
@@ -1726,6 +1726,14 @@ packages:
   decode-named-character-reference@1.0.2:
     resolution: {integrity: sha512-O8x12RzrUF8xyVcY0KJowWsmaJxQbmy0/EtnNtHRpsOcT7dFk5W598coHqBVpmWo1oQQfsCqfCmkZN5DJrZVdg==}
 
+  dedent@1.5.3:
+    resolution: {integrity: sha512-NHQtfOOW68WD8lgypbLA5oT+Bt0xXJhiYvoR6SmmNXZfpzOGXwdKWmcwG8N7PwVVWV3eF/68nmD9BaJSsTBhyQ==}
+    peerDependencies:
+      babel-plugin-macros: ^3.1.0
+    peerDependenciesMeta:
+      babel-plugin-macros:
+        optional: true
+
   deep-is@0.1.4:
     resolution: {integrity: sha512-oIPzksmTg4/MriiaYGO+okXDT7ztn/w3Eptv/+gSIdMdKsJo0u4CfYNFJPy+4SKMuCqGw2wxnA+URMg3t8a/bQ==}
 
@@ -2771,6 +2779,9 @@ packages:
       '@types/node':
         optional: true
 
+  micro-memoize@4.1.2:
+    resolution: {integrity: sha512-+HzcV2H+rbSJzApgkj0NdTakkC+bnyeiUxgT6/m7mjcz1CmM22KYFKp+EVj1sWe4UYcnriJr5uqHQD/gMHLD+g==}
+
   micromark-core-commonmark@2.0.0:
     resolution: {integrity: sha512-jThOz/pVmAYUtkroV3D5c1osFXAMv9e0ypGDOIZuCeAe91/sD6BoE2Sjzt30yuXtwOYUmySOhMas/PVyh02itA==}
 
@@ -3041,6 +3052,10 @@ packages:
     resolution: {integrity: sha512-R4nPAVTAU0B9D35/Gk3uJf/7XYbQcyohSKdvAxIRSNghFl4e71hVoGnBNQz9cWaXxO2I10KTC+3jMdvvoKw6dQ==}
     engines: {node: '>=6'}
 
+  package-up@5.0.0:
+    resolution: {integrity: sha512-MQEgDUvXCa3sGvqHg3pzHO8e9gqTCMPVrWUko3vPQGntwegmFo52mZb2abIVTjFnUcW0BcPz0D93jV5Cas1DWA==}
+    engines: {node: '>=18'}
+
   param-case@3.0.4:
     resolution: {integrity: sha512-RXlj7zCYokReqWpOPH9oYivUzLYZ5vAPIfEmCTNViosC78F8F0H9y7T7gG2M39ymgutxF5gcFEsyZQSph9Bp3A==}
 
@@ -3185,6 +3200,9 @@ packages:
   prelude-ls@1.2.1:
     resolution: {integrity: sha512-vkcDPrRZo1QZLbn5RLGPpg/WmIQ65qoWWhcGKf/b5eplkkarX0m9z8ppCat4mlOqUsWpyNuYgO3VRyrYHSzX5g==}
     engines: {node: '>= 0.8.0'}
+
+  prettier-plugin-embed@0.4.15:
+    resolution: {integrity: sha512-9pZVIp3bw2jw+Ge+iAMZ4j+sIVC9cPruZ93H2tj5Wa/3YDFDJ/uYyVWdUGfcFUnv28drhW2Bmome9xSGXsPKOw==}
 
   prettier-plugin-jsdoc@1.3.0:
     resolution: {integrity: sha512-cQm8xIa0fN9ieJFMXACQd6JPycl+8ouOijAqUqu44EF/s4fXL3Wi9sKXuEaodsEWgCN42Xby/bNhqgM1iWx4uw==}
@@ -3675,6 +3693,9 @@ packages:
   through@2.3.8:
     resolution: {integrity: sha512-w89qg7PI8wAdvX60bMDP+bFoD5Dvhm9oLheFp5O4a2QF0cSBGsBX4qZmadPMvVqlLJBBci+WqGGOAPvcDeNSVg==}
 
+  tiny-jsonc@1.0.1:
+    resolution: {integrity: sha512-ik6BCxzva9DoiEfDX/li0L2cWKPPENYvixUprFdl3YPi4bZZUhDnNI9YUkacrv+uIG90dnxR5mNqaoD6UhD6Bw==}
+
   title-case@3.0.3:
     resolution: {integrity: sha512-e1zGYRvbffpcHIrnuqT0Dh+gEJtDaxDSoG4JAIpq4oDFyooziLBIiYQv0GBT4FUAnUop5uZ1hiIAj7oAF6sOCA==}
 
@@ -3779,6 +3800,10 @@ packages:
   type-fest@2.19.0:
     resolution: {integrity: sha512-RAH822pAdBgcNMAfWnCBU3CFZcfZ/i1eZjwFU/dsLKumyuuP3niueg2UAukXYF0E2AAoc82ZSSf9J0WQBinzHA==}
     engines: {node: '>=12.20'}
+
+  type-fest@4.26.1:
+    resolution: {integrity: sha512-yOGpmOAL7CkKe/91I5O3gPICmJNLJ1G4zFYVAsRHg7M64biSnPtRj0WNQt++bRkjYOqjWXrhnUw1utzmVErAdg==}
+    engines: {node: '>=16'}
 
   type-level-regexp@0.1.17:
     resolution: {integrity: sha512-wTk4DH3cxwk196uGLK/E9pE45aLfeKJacKmcEgEOA/q5dnPGNxXt0cfYdFxb57L+sEpf1oJH4Dnx/pnRcku9jg==}
@@ -4069,12 +4094,13 @@ snapshots:
       - supports-color
       - typescript
 
-  '@2digits/prettier-config@2.4.1(prettier@3.3.3)':
+  '@2digits/prettier-config@2.5.0(prettier@3.3.3)':
     dependencies:
       '@2digits/constants': 0.3.3
       '@ianvs/prettier-plugin-sort-imports': 4.3.1(prettier@3.3.3)
       local-pkg: 0.5.0
       prettier: 3.3.3
+      prettier-plugin-embed: 0.4.15
       prettier-plugin-jsdoc: 1.3.0(prettier@3.3.3)
       prettier-plugin-sql: 0.18.1(prettier@3.3.3)
       prettier-plugin-tailwindcss: 0.6.8(@ianvs/prettier-plugin-sort-imports@4.3.1(prettier@3.3.3))(prettier-plugin-jsdoc@1.3.0(prettier@3.3.3))(prettier@3.3.3)
@@ -4085,6 +4111,7 @@ snapshots:
       - '@trivago/prettier-plugin-sort-imports'
       - '@vue/compiler-sfc'
       - '@zackad/prettier-plugin-twig-melody'
+      - babel-plugin-macros
       - prettier-plugin-astro
       - prettier-plugin-css-order
       - prettier-plugin-import-sort
@@ -6336,6 +6363,8 @@ snapshots:
     dependencies:
       character-entities: 2.0.2
 
+  dedent@1.5.3: {}
+
   deep-is@0.1.4: {}
 
   defaults@1.0.4:
@@ -7644,6 +7673,8 @@ snapshots:
     optionalDependencies:
       '@types/node': 20.17.6
 
+  micro-memoize@4.1.2: {}
+
   micromark-core-commonmark@2.0.0:
     dependencies:
       decode-named-character-reference: 1.0.2
@@ -7996,6 +8027,10 @@ snapshots:
 
   p-try@2.2.0: {}
 
+  package-up@5.0.0:
+    dependencies:
+      find-up-simple: 1.0.0
+
   param-case@3.0.4:
     dependencies:
       dot-case: 3.0.4
@@ -8124,6 +8159,17 @@ snapshots:
       source-map-js: 1.2.1
 
   prelude-ls@1.2.1: {}
+
+  prettier-plugin-embed@0.4.15:
+    dependencies:
+      '@types/estree': 1.0.6
+      dedent: 1.5.3
+      micro-memoize: 4.1.2
+      package-up: 5.0.0
+      tiny-jsonc: 1.0.1
+      type-fest: 4.26.1
+    transitivePeerDependencies:
+      - babel-plugin-macros
 
   prettier-plugin-jsdoc@1.3.0(prettier@3.3.3):
     dependencies:
@@ -8646,6 +8692,8 @@ snapshots:
 
   through@2.3.8: {}
 
+  tiny-jsonc@1.0.1: {}
+
   title-case@3.0.3:
     dependencies:
       tslib: 2.7.0
@@ -8723,6 +8771,8 @@ snapshots:
   type-fest@0.8.1: {}
 
   type-fest@2.19.0: {}
+
+  type-fest@4.26.1: {}
 
   type-level-regexp@0.1.17: {}
 
