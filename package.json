@@ -30,7 +30,7 @@
   "devDependencies": {
     "@2digits/eslint-config": "^2.10.8",
     "@2digits/prettier-config": "^2.6.4",
-    "@2digits/tsconfig": "^0.6.2",
+    "@2digits/tsconfig": "^0.6.3",
     "@graphql-codegen/cli": "^5.0.3",
     "@graphql-codegen/import-types-preset": "^3.0.0",
     "@graphql-codegen/typescript": "^4.1.2",
