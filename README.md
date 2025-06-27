@@ -16,7 +16,7 @@ Since the client also wants a mobile application with their blog posts in the fu
 
 For this assignment, user stories have been created by a colleague so you know exactly what the application needs to meet. In addition, a basic application has already been set up with some of our libraries that we use in this repository. For as our projects, we use NextJS and some other libraries that have already been added to this repository, try to continue working with those as well.
 
-The design can be seen in [InVision](https://invis.io/XB13G46UCKWN#/475579155_Homepage). Bram also sent you a link where you can inspect all the specific elements in InVision such as font sizes, margins, etc.... No mobile design has been worked out but the website should of course be available on every device, in this you are free to decide how you want to design it.
+The design can be seen in [Figma](https://www.figma.com/design/BxeHBo8EaGJpaXSC0ZywuY/2DIGITS---Development-case?node-id=2003-18423&t=4Fz9HVqKu1z2PU5g-1). No mobile design has been worked out but the website should of course be available on every device, in this you are free to decide how you want to design it.
 
 ## User Stories
 
