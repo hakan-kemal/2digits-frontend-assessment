@@ -1,0 +1,29 @@
+query Schema($navigationId: String, $blogId: String) {
+  Page(slug: "/") {
+    page_header {
+      title
+    }
+  }
+  Blogs {
+    items {
+      _id
+      title
+    }
+  }
+  Blog(id: $blogId) {
+    _id
+    title
+    content {
+      ... on Text {
+        text
+      }
+    }
+  }
+  Navigation(id: $navigationId) {
+    items {
+      _id
+      title
+    }
+    title
+  }
+}
