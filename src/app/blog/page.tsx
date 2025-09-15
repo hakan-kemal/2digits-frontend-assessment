@@ -1,17 +1,19 @@
 import { PreprSdk } from '@/server/prepr';
 
-export default async function Blog() {
-  const blogId = '560a2073-1d74-424c-8464-db2e32ea0cd3';
-
-  const { Blog } = await PreprSdk.Schema({
-    blogId,
-  });
+export default async function Blogs() {
+  const { Blogs } = await PreprSdk.Schema();
 
   return (
     <div>
-      <h1>Blog pagina</h1>
+      <h1>Blogs pagina</h1>
 
-      {Blog?.title}
+      <div>
+        {Blogs?.items.map((blog) => (
+          <div key={blog._id}>
+            <h2>{blog.title}</h2>
+          </div>
+        ))}
+      </div>
     </div>
   );
 }

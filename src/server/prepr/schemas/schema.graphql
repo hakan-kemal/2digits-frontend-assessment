@@ -7,23 +7,23 @@ query Schema($navigationId: String, $blogId: String) {
   Blogs {
     items {
       _id
+      _slug
       title
     }
   }
   Blog(id: $blogId) {
     _id
+    _slug
     title
-    content {
-      ... on Text {
-        text
-      }
-    }
   }
   Navigation(id: $navigationId) {
     items {
       _id
       title
+      link_to_page {
+        _id
+        _slug
+      }
     }
-    title
   }
 }
