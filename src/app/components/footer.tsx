@@ -3,10 +3,8 @@ import Link from 'next/link';
 import { PreprSdk } from '@/server/prepr';
 
 export default async function Footer() {
-  const footerId = 'c24ccb9b-719a-4655-b294-c2d0b10031d9';
-
-  const { Navigation } = await PreprSdk.GetNavigation({
-    navigationId: footerId,
+  const { Navigation } = await PreprSdk.getNavigation({
+    slug: 'footer',
   });
 
   return (

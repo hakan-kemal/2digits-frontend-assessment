@@ -19,7 +19,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
       <body className={roboto.className}>
         <Header />
 
-        {children}
+        <main className="px-4 py-5 md:px-20 lg:px-40">{children}</main>
 
         <Footer />
       </body>

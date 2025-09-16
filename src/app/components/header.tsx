@@ -5,10 +5,8 @@ import { PreprSdk } from '@/server/prepr';
 import Logo from './logo';
 
 export default async function Header() {
-  const headerId = 'afead6d3-65fb-4121-8624-18ce2b65869c';
-
-  const { Navigation } = await PreprSdk.GetNavigation({
-    navigationId: headerId,
+  const { Navigation } = await PreprSdk.getNavigation({
+    slug: 'header',
   });
 
   return (

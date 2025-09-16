@@ -2,10 +2,8 @@ import { PreprSdk } from '@/server/prepr';
 
 export default async function Page(props: { params: Promise<{ slug: string }> }) {
   const params = await props.params;
-  console.log('params', params.slug);
 
-  const { Page } = await PreprSdk.GetPage({ slug: params.slug });
-  console.log('slug?', Page);
+  const { Page } = await PreprSdk.getPage({ slug: params.slug });
 
-  return <main>Test</main>;
+  return <h1>Pagina titel: {Page?.page_header?.title} </h1>;
 }

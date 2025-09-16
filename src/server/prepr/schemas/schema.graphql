@@ -1,6 +1,161 @@
+type Pages {
+  items: [Page!]!
+  total: Int!
+}
+
+type Page {
+  _id: String!
+  _slug: String!
+  page_header: PageHeader
+  title: String!
+}
+
+type PageHeader {
+  _id: String!
+  image: Asset!
+  text: String
+  title: String!
+}
+
+type Blogs {
+  items: [Blog!]!
+  total: Int!
+}
+
+type Blog {
+  _id: String!
+  _slug: String!
+  banner_image: Asset!
+  categories: [Tag!]!
+  related_blogs: [Blog!]!
+  title: String!
+}
+
+type Asset {
+  _id: String!
+  height: Int
+  url: String
+  width: Int
+}
+
+type Tag {
+  _id: String!
+  body: String
+  slug: String
+}
+
+type Navigations {
+  items: [Navigation!]!
+  total: Int!
+}
+
+type Navigation {
+  _id: String!
+  _slug: String
+  items: [MenuItem!]!
+  title: String!
+}
+
+type MenuItem {
+  _id: String!
+  _slug: String
+  link_to_page: [Page!]!
+  title: String!
+}
+
 type Query {
+  pages: Pages
   page(slug: String): Page
-  blogs: [Blog!]!
-  blog(id: ID!): Blog
-  navigation(id: ID!): Navigation
+  blogs: Blogs
+  blog(slug: String): Blog
+  navigations: Navigations
+  navigation(slug: String): Navigation
+}
+
+query getPages {
+  Pages {
+    items {
+      _id
+      _slug
+      title
+    }
+    total
+  }
+}
+
+query getPage($slug: String) {
+  Page(slug: $slug) {
+    _id
+    _slug
+    page_header {
+      _id
+      image {
+        _id
+        height
+        url
+        width
+      }
+      text
+      title
+    }
+    title
+  }
+}
+
+query getBlogs {
+  Blogs {
+    items {
+      _id
+      _slug
+      title
+    }
+    total
+  }
+}
+
+query getBlog($slug: String) {
+  Blog(slug: $slug) {
+    _id
+    _slug
+    banner_image {
+      _id
+      height
+      url
+      width
+    }
+    categories {
+      _id
+      body
+      slug
+    }
+    title
+  }
+}
+
+query getNavigations {
+  Navigations {
+    items {
+      _id
+      _slug
+      title
+    }
+    total
+  }
+}
+
+query getNavigation($slug: String) {
+  Navigation(slug: $slug) {
+    _id
+    _slug
+    items {
+      _id
+      _slug
+      link_to_page {
+        _id
+        _slug
+      }
+      title
+    }
+    title
+  }
 }
