@@ -3,11 +3,11 @@
 import { useState } from 'react';
 
 interface TagProps {
-  title: string;
+  label: string;
   type?: 'tag' | 'clickable-tag';
 }
 
-export default function Tag({ title, type = 'tag' }: TagProps) {
+export default function Tag({ label, type = 'tag' }: TagProps) {
   const [active, setActive] = useState(false);
 
   const baseStyles = 'inline-block min-w-20 rounded px-3 py-1 text-center text-xs/6 font-medium uppercase';
@@ -15,10 +15,10 @@ export default function Tag({ title, type = 'tag' }: TagProps) {
   return type === 'clickable-tag' ? (
     <button
       onClick={() => setActive(!active)}
-      className={`border ${baseStyles} ${active ? 'border-tag-purple bg-tag-purple text-white' : 'hover:border-tag-purple border-tag-border-gray bg-white text-black'} `}>
-      {title}
+      className={`border ${baseStyles} ${active ? 'border-blue-violet bg-blue-violet text-white' : 'hover:border-blue-violet border-bright-gray text-chinese-black bg-white'} `}>
+      {label}
     </button>
   ) : (
-    <span className={`bg-tag-gray text-tag-black ${baseStyles}`}>{title}</span>
+    <span className={`bg-bright-gray-2 text-chinese-black ${baseStyles}`}>{label}</span>
   );
 }
