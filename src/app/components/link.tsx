@@ -6,13 +6,13 @@ interface LinkProps {
   color?: 'black' | 'white' | 'purple';
   href: string;
   label: string;
-  size?: 'xs' | 'sm' | 'lg';
+  size?: 'xs' | 'base' | 'lg';
 }
 
-export default function Link({ color = 'black', href, label, size = 'sm' }: LinkProps) {
+export default function Link({ color = 'black', href, label, size = 'base' }: LinkProps) {
   const sizeClasses = {
     xs: 'text-xs/4',
-    sm: 'text-[15px]/6 font-medium',
+    base: 'text-base font-medium',
     lg: 'text-lg/6 font-medium',
   }[size];
 
