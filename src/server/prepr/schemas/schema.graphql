@@ -1,29 +1,6 @@
-query Schema($navigationId: String, $blogId: String) {
-  Page(slug: "/") {
-    page_header {
-      title
-    }
-  }
-  Blogs {
-    items {
-      _id
-      _slug
-      title
-    }
-  }
-  Blog(id: $blogId) {
-    _id
-    _slug
-    title
-  }
-  Navigation(id: $navigationId) {
-    items {
-      _id
-      title
-      link_to_page {
-        _id
-        _slug
-      }
-    }
-  }
+type Query {
+  page(slug: String): Page
+  blogs: [Blog!]!
+  blog(id: ID!): Blog
+  navigation(id: ID!): Navigation
 }

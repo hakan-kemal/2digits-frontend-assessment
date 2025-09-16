@@ -1,7 +1,7 @@
 import { PreprSdk } from '@/server/prepr';
 
 export default async function Blogs() {
-  const { Blogs } = await PreprSdk.Schema();
+  const { Blogs } = await PreprSdk.GetBlogs();
 
   return (
     <div>

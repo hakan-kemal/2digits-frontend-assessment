@@ -1,38 +1,31 @@
-import Image from 'next/image';
 import Link from 'next/link';
 
 import { PreprSdk } from '@/server/prepr';
 
+import Logo from './logo';
+
 export default async function Header() {
   const headerId = 'afead6d3-65fb-4121-8624-18ce2b65869c';
 
-  const { Navigation } = await PreprSdk.Schema({
+  const { Navigation } = await PreprSdk.GetNavigation({
     navigationId: headerId,
   });
 
-  const navItems = Navigation?.items;
-
   return (
-    <header className="mx-4 my-5 md:mx-20 lg:mx-40">
-      {navItems ? (
+    <header>
+      {Navigation?.items ? (
         <nav>
-          <ul className="flex justify-between">
-            {navItems.map(({ _id, link_to_page, title }) => {
+          <ul className="flex min-h-20 flex-wrap items-center justify-between gap-4 px-4 py-5 md:px-20 lg:px-40">
+            {Navigation.items.map(({ _id, link_to_page, title }) => {
               const slug = link_to_page[0]?._slug || '';
               const isHome = slug === '/';
 
-              return (
-                <li key={_id}>
-                  <Link href={slug}>
-                    {isHome ? <Image src="/2digits-logo.svg" alt="2DIGITS Logo" width={200} height={60} /> : title}
-                  </Link>
-                </li>
-              );
+              return <li key={_id}>{isHome ? <Logo /> : <Link href={slug}>{title}</Link>}</li>;
             })}
           </ul>
         </nav>
       ) : (
-        <Image src="/2digits-logo.svg" alt="2DIGITS Logo" width={200} height={0} />
+        <Logo />
       )}
     </header>
   );
