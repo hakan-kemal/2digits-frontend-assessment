@@ -30,3 +30,10 @@ body {
     text-wrap: balance;
   }
 }
+
+@theme {
+  --color-tag-border-gray: #ededed;
+  --color-tag-black: #141414;
+  --color-tag-gray: #e9ebf4;
+  --color-tag-purple: #762bff;
+}

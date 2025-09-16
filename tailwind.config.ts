@@ -12,6 +12,12 @@ const config = withTV({
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic': 'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
+      colors: {
+        'tag-border-gray': '#ededed',
+        'tag-black': '#141414',
+        'tag-gray': '#e9ebf4',
+        'tag-purple': '#762bff',
+      },
     },
   },
   plugins: [],
