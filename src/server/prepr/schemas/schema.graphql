@@ -33,6 +33,7 @@ type Blog {
 
 type Asset {
   _id: String!
+  description: String
   height: Int
   url: String
   width: Int
@@ -91,6 +92,7 @@ query getPage($slug: String) {
       _id
       image {
         _id
+        description
         height
         url
         width
@@ -102,11 +104,26 @@ query getPage($slug: String) {
   }
 }
 
-query getBlogs {
-  Blogs {
+query getBlogs($limit: Int, $skip: Int, $sort: BlogSortInput, $query: String) {
+  Blogs(limit: $limit, skip: $skip, sort: $sort, where: { _search: $query }) {
     items {
       _id
       _slug
+      banner_image {
+        _id
+        description
+        height
+        url
+        width
+      }
+      categories {
+        body
+      }
+      content {
+        ... on Text {
+          text
+        }
+      }
       title
     }
     total
@@ -119,14 +136,33 @@ query getBlog($slug: String) {
     _slug
     banner_image {
       _id
+      description
       height
       url
       width
     }
     categories {
-      _id
       body
-      slug
+    }
+    related_blogs {
+      _id
+      _slug
+      banner_image {
+        _id
+        description
+        height
+        url
+        width
+      }
+      categories {
+        body
+      }
+      content {
+        ... on Text {
+          text
+        }
+      }
+      title
     }
     title
   }

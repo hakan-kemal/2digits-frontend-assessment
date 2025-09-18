@@ -19,7 +19,7 @@ export default async function Header() {
 
               return (
                 <li key={_id}>
-                  {isHome ? <Logo /> : slug && <Link href={slug} label={title} size="lg" color="black" />}
+                  {isHome ? <Logo /> : slug && <Link href={`/${slug}`} label={title} size="lg" color="black" />}
                 </li>
               );
             })}

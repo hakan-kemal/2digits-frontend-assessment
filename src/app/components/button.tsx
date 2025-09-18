@@ -1,16 +1,17 @@
 'use client';
 
-interface ButtonProps {
+interface ButtonProps extends React.HTMLAttributes<HTMLButtonElement> {
   children: React.ReactNode;
   onClick?: () => void;
+  type?: 'button' | 'submit';
 }
 
-export default function Button({ children, onClick }: ButtonProps) {
+export default function Button({ children, onClick, type }: ButtonProps) {
   return (
     <button
-      className="text-chinese-black border-chinese-black min-w-28 rounded border-2 px-6 py-3 text-base/6 font-medium"
+      className="min-w-28 rounded border-2 border-chinese-black px-8 py-3 text-base/6 font-medium text-chinese-black"
       onClick={onClick}
-      type="button">
+      type={type}>
       {children}
     </button>
   );

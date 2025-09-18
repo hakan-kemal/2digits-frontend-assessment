@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 
-interface TagProps {
+interface TagProps extends React.HTMLAttributes<HTMLButtonElement | HTMLSpanElement> {
   label: string;
   type?: 'tag' | 'clickable-tag';
 }
@@ -15,7 +15,8 @@ export default function Tag({ label, type = 'tag' }: TagProps) {
   return type === 'clickable-tag' ? (
     <button
       onClick={() => setActive(!active)}
-      className={`border ${baseStyles} ${active ? 'border-blue-violet bg-blue-violet text-white' : 'hover:border-blue-violet border-bright-gray text-chinese-black bg-white'} `}>
+      className={`border ${baseStyles} ${active ? 'border-blue-violet bg-blue-violet text-white' : 'hover:border-blue-violet border-bright-gray text-chinese-black bg-white'} `}
+      type="button">
       {label}
     </button>
   ) : (

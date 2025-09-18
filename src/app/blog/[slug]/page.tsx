@@ -1,15 +1,17 @@
 import { PreprSdk } from '@/server/prepr';
 
-export default async function Blog(props: { params: Promise<{ slug: string }> }) {
-  const params = await props.params;
+import BlogsShowcase from '../../components/blogs-showcase';
+import PageHeader from '../../components/page-header';
 
-  const { Blog } = await PreprSdk.getBlog({ slug: params.slug });
+export default async function BlogPage({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
+  const { Blog } = await PreprSdk.getBlog({ slug });
 
   return (
-    <div>
-      <h1>Blog pagina</h1>
+    <>
+      {Blog?.banner_image && <PageHeader image={Blog.banner_image} type="default" />}
 
-      {Blog?.title}
-    </div>
+      {Blog?.related_blogs && <BlogsShowcase blogs={Blog.related_blogs} title="Related blogs" />}
+    </>
   );
 }
