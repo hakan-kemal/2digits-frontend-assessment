@@ -1,6 +1,5 @@
+import Link from '@/app/components/link';
 import { PreprSdk } from '@/server/prepr';
-
-import Link from './link';
 
 export default async function Footer() {
   const { Navigation } = await PreprSdk.getNavigation({

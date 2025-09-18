@@ -3,6 +3,9 @@
 import { useState } from 'react';
 import type { FormEvent } from 'react';
 
+import Button from '@/app/components/button';
+import Typography from '@/app/components/typography';
+
 type BlogSearchProps = {
   onSearch: (query: string) => void;
   placeholder: string;
@@ -19,7 +22,9 @@ export default function BlogSearch({ onSearch, placeholder, title }: BlogSearchP
 
   return (
     <div className="flex w-full flex-col gap-6 bg-bright-gray-2 px-4 py-12 text-chinese-black md:px-20 lg:px-40">
-      <p className="text-xl tracking-[0.26px]">{title}</p>
+      <Typography as="h3" weight="medium" className="mt-3">
+        {title}
+      </Typography>
 
       <form className="flex gap-6" onSubmit={handleSubmit}>
         <input
@@ -31,11 +36,7 @@ export default function BlogSearch({ onSearch, placeholder, title }: BlogSearchP
           aria-label="Search"
         />
 
-        <button
-          className="min-w-28 rounded border-2 border-chinese-black px-8 py-3 text-base/6 font-medium text-chinese-black"
-          type="submit">
-          Search
-        </button>
+        <Button type="submit">Search</Button>
       </form>
     </div>
   );

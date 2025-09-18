@@ -1,39 +1,36 @@
 'use client';
 
 interface TypographyProps extends React.HTMLAttributes<HTMLParagraphElement | HTMLHeadingElement | HTMLSpanElement> {
-  as?: 'p' | 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'span';
-  variant?: 'body' | 'caption' | 'heading' | 'subheading';
-  weight?: 'regular' | 'medium' | 'semibold' | 'bold';
+  as?: 'p' | 'h1' | 'h2' | 'h3' | 'span';
+  weight?: 'normal' | 'medium' | 'semibold' | 'bold';
   children: React.ReactNode;
 }
 
 export default function Typography({
-  as: Typography = 'p',
-  variant = 'body',
-  weight = 'regular',
+  as: Component = 'p',
+  weight = 'normal',
   children,
   className,
   ...props
 }: TypographyProps) {
-  const baseStyles = 'text-chinese-black tracking-[0.2px]';
+  const headingStyles = {
+    h1: 'text-7xl',
+    h2: 'text-5xl/[56px]',
+    h3: 'text-xl/6 tracking-[0.26px]',
+    p: 'text-base/4 tracking-[0.2px]',
+    span: '',
+  }[Component];
 
-  const variantStyles: Record<typeof variant, string> = {
-    body: 'text-base/6',
-    caption: 'text-sm/5',
-    heading: 'text-2xl/8',
-    subheading: 'text-lg/7',
-  };
-
-  const weightStyles: Record<typeof weight, string> = {
-    regular: 'font-normal',
+  const weightStyles = {
+    normal: 'font-normal',
     medium: 'font-medium',
     semibold: 'font-semibold',
     bold: 'font-bold',
-  };
+  }[weight];
 
   return (
-    <Typography className={`${baseStyles} ${variantStyles[variant]} ${weightStyles[weight]} ${className}`} {...props}>
+    <Component className={`${headingStyles} ${weightStyles} ${className}`} {...props}>
       {children}
-    </Typography>
+    </Component>
   );
 }

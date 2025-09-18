@@ -1,7 +1,6 @@
+import Link from '@/app/components/link';
+import Logo from '@/app/components/logo';
 import { PreprSdk } from '@/server/prepr';
-
-import Link from './link';
-import Logo from './logo';
 
 export default async function Header() {
   const { Navigation } = await PreprSdk.getNavigation({

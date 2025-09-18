@@ -2,7 +2,7 @@
 
 import { useRouter, useSearchParams } from 'next/navigation';
 
-import BlogSearch from '../components/blog-search';
+import BlogSearch from '@/app/components/blog-search';
 
 export default function BlogSearchWrapper() {
   const router = useRouter();
@@ -21,7 +21,6 @@ export default function BlogSearchWrapper() {
   };
 
   return (
-    // absolute bottom-0 w-full
     <div className="w-full">
       <BlogSearch onSearch={handleSearch} placeholder="Search blogs..." title="Search for blogs" />
     </div>

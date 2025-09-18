@@ -1,7 +1,6 @@
+import BlogsShowcase from '@/app/components/blogs-showcase';
+import PageHeader from '@/app/components/page-header';
 import { PreprSdk } from '@/server/prepr';
-
-import BlogsShowcase from './components/blogs-showcase';
-import PageHeader from './components/page-header';
 
 export default async function HomePage() {
   const { Page } = await PreprSdk.getPage({ slug: '/' });

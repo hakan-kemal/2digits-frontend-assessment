@@ -104,8 +104,8 @@ query getPage($slug: String) {
   }
 }
 
-query getBlogs($limit: Int, $skip: Int, $sort: BlogSortInput, $query: String) {
-  Blogs(limit: $limit, skip: $skip, sort: $sort, where: { _search: $query }) {
+query getBlogs($limit: Int, $skip: Int, $sort: BlogSortInput, $query: String, $categories: [String]) {
+  Blogs(limit: $limit, skip: $skip, sort: $sort, where: { _search: $query, categories_all: $categories }) {
     items {
       _id
       _slug
@@ -117,7 +117,9 @@ query getBlogs($limit: Int, $skip: Int, $sort: BlogSortInput, $query: String) {
         width
       }
       categories {
+        _id
         body
+        slug
       }
       content {
         ... on Text {
@@ -127,6 +129,18 @@ query getBlogs($limit: Int, $skip: Int, $sort: BlogSortInput, $query: String) {
       title
     }
     total
+  }
+}
+
+query getBlogsCategories {
+  Blogs(limit: null) {
+    items {
+      categories {
+        _id
+        body
+        slug
+      }
+    }
   }
 }
 
@@ -163,6 +177,15 @@ query getBlog($slug: String) {
         }
       }
       title
+    }
+    content {
+      ... on Text {
+        _id
+        html
+        body
+        text
+        format
+      }
     }
     title
   }

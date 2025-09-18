@@ -1,3 +1,4 @@
+import Typography from '@/app/components/typography';
 import { PreprSdk } from '@/server/prepr';
 
 export default async function BlogsPage({ params }: { params: Promise<{ slug: string }> }) {
@@ -5,5 +6,11 @@ export default async function BlogsPage({ params }: { params: Promise<{ slug: st
 
   const { Page } = await PreprSdk.getPage({ slug });
 
-  return <h1>Pagina titel: {Page?.page_header?.title} </h1>;
+  return (
+    Page?.page_header && (
+      <Typography as="h2" weight="bold">
+        {Page.page_header.title}
+      </Typography>
+    )
+  );
 }

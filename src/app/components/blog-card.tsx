@@ -2,13 +2,13 @@
 
 import Image from 'next/image';
 
+import Link from '@/app/components/link';
+import Tag from '@/app/components/tag';
+import Typography from '@/app/components/typography';
 import type {
   PreprGetBlogsQuery_Blogs_Blogs_items_Blog,
   PreprGetBlogsQuery_Blogs_Blogs_items_Blog_content_Text,
 } from '@/server/prepr/generated/preprAPI.schema';
-
-import Link from './link';
-import Tag from './tag';
 
 interface BlogCardProps {
   blog: PreprGetBlogsQuery_Blogs_Blogs_items_Blog;
@@ -38,9 +38,15 @@ export default function BlogCard({ blog }: BlogCardProps) {
       </div>
 
       <div className="flex flex-col gap-6">
-        <h3 className="text-xl/5 font-medium tracking-[0.26px]">{blog.title}</h3>
+        <Typography as="h3" weight="medium" className="mt-3">
+          {blog.title}
+        </Typography>
 
-        {text && <p className="text-base/4 tracking-[0.2px]">{text.slice(0, Math.floor(text.length / 2))}...</p>}
+        {text && (
+          <Typography as="p" className="mt-3">
+            {text.slice(0, Math.floor(text.length / 2))}...
+          </Typography>
+        )}
 
         <Link color="purple" href={`blog/${blog._slug}`} label="Read more" size="base" />
       </div>

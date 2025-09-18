@@ -1,12 +1,13 @@
 import type { Metadata } from 'next';
-import { Roboto } from 'next/font/google';
+import { Open_Sans, Roboto } from 'next/font/google';
 
-import Footer from './components/footer';
-import Header from './components/header';
+import Footer from '@/app/components/footer';
+import Header from '@/app/components/header';
 
 import './globals.css';
 
 const roboto = Roboto({ subsets: ['latin'] });
+const openSans = Open_Sans({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
   title: '2DIGITS blog site',
@@ -16,7 +17,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en">
-      <body className={roboto.className}>
+      <body className={`${roboto.className} ${openSans.className}`}>
         <Header />
 
         <main>{children}</main>
