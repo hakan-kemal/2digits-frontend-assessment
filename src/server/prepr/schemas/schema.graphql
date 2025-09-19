@@ -65,12 +65,12 @@ type MenuItem {
 }
 
 type Query {
-  pages: Pages
-  page(slug: String): Page
-  blogs: Blogs
-  blog(slug: String): Blog
-  navigations: Navigations
-  navigation(slug: String): Navigation
+  Pages: Pages
+  Page(slug: String): Page
+  Blogs: Blogs
+  Blog(slug: String): Blog
+  Navigations: Navigations
+  Navigation(slug: String): Navigation
 }
 
 query getPages {
