@@ -1,8 +1,5 @@
 import { Fragment } from 'react';
 
-import parse from 'html-react-parser';
-import DOMPurify from 'isomorphic-dompurify';
-
 import BlogsShowcase from '@/app/components/blogs-showcase';
 import PageHeader from '@/app/components/page-header';
 import Tag from '@/app/components/tag';
@@ -34,7 +31,7 @@ export default async function BlogPage({ params }: BlogPageProps) {
           <div className="font-openSans *:mt-8 [&_h2]:text-xl/6 [&_h2]:font-medium [&_h3]:text-xl/6 [&_h3]:font-medium [&_h3]:tracking-[0.26px] [&_li]:list-disc [&_p]:mt-4 [&_p]:text-base [&_p]:tracking-[0.2px] [&_ul]:pl-4">
             {(Blog.content as PreprGetBlogQuery_Blog_Blog_content_Text[])
               .filter(({ _id, html }) => _id && html)
-              .map(({ _id, html }) => html && <Fragment key={_id}>{parse(DOMPurify.sanitize(html))}</Fragment>)}
+              .map(({ _id, html }) => html && <Fragment key={_id}>{html}</Fragment>)}
           </div>
         )}
       </div>
