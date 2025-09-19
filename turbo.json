@@ -12,11 +12,7 @@
     "types": { "dependsOn": ["codegen"], "outputs": ["./tsconfig.tsbuildinfo"] },
     "codegen": {
       "env": ["GRAPHQL_URL"],
-      "inputs": [
-        "./src/server/prepr/schemas/**/*.graphql",
-        "./graphql.config.json",
-        "./codegen.ts"
-      ],
+      "inputs": ["./src/server/prepr/schemas/**/*.graphql", "./graphql.config.json", "./codegen.ts"],
       "outputs": ["./src/server/prepr/generated/**"]
     }
   }
