@@ -1,10 +1,6 @@
 'use-client';
 
-import { useState } from 'react';
-import type { FormEvent } from 'react';
-
-import DOMPurify from 'dompurify';
-import parse from 'html-react-parser';
+import { useState, type FormEvent } from 'react';
 
 import Button from '@/app/components/button';
 import Typography from '@/app/components/typography';
