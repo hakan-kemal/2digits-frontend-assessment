@@ -1,8 +1,8 @@
 'use client';
 
 import Image from 'next/image';
+import Link from 'next/link';
 
-import Link from '@/app/components/link';
 import Tag from '@/app/components/tag';
 import Typography from '@/app/components/typography';
 import type {
@@ -43,12 +43,16 @@ export default function BlogCard({ blog }: BlogCardProps) {
         </Typography>
 
         {text && (
-          <Typography as="p" className="mt-3">
+          // eslint-disable-next-line tailwindcss/no-custom-classname
+          <Typography as="p" className="font-openSans mt-3">
             {text.slice(0, Math.floor(text.length / 2))}...
           </Typography>
         )}
 
-        <Link color="purple" href={`blog/${blog._slug}`} label="Read more" size="base" />
+        <Link className="flex gap-4 text-base font-medium text-blue-violet" href={`blog/${blog._slug}`}>
+          Read more
+          <Image src="/icon.svg" alt="Read more" width={14} height={0} />
+        </Link>
       </div>
     </div>
   );

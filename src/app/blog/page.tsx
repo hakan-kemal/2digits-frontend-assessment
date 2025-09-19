@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import Link from 'next/link';
 
 import BlogCard from '@/app/components/blog-card';
@@ -55,7 +56,17 @@ export default async function BlogsPage({
 
       {totalPages > 1 && (
         <div className="flex items-center justify-center gap-4 px-4 md:px-20 lg:px-40 lg:py-4">
-          {currentPage > 1 && <Link href={`/blog?page=${currentPage - 1}`}>&lt;</Link>}
+          {currentPage > 1 && (
+            <Link href={`/blog?page=${currentPage - 1}`} className="group mr-6 inline-flex">
+              <Image
+                src="/chevron-left.svg"
+                alt="previous page"
+                width={14}
+                height={14}
+                className="transition-transform duration-200 group-hover:scale-125"
+              />
+            </Link>
+          )}
 
           {pageNumbers.map((num) => (
             <Link
@@ -70,7 +81,17 @@ export default async function BlogsPage({
             </Link>
           ))}
 
-          {currentPage < totalPages && <Link href={`/blog?page=${currentPage + 1}`}>&gt;</Link>}
+          {currentPage < totalPages && (
+            <Link href={`/blog?page=${currentPage + 1}`} className="group ml-6 inline-flex">
+              <Image
+                src="/chevron-right.svg"
+                alt="next page"
+                width={14}
+                height={0}
+                className="transition-transform duration-200 group-hover:scale-125"
+              />
+            </Link>
+          )}
         </div>
       )}
     </>

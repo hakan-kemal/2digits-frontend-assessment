@@ -2,6 +2,8 @@ import BlogsShowcase from '@/app/components/blogs-showcase';
 import PageHeader from '@/app/components/page-header';
 import { PreprSdk } from '@/server/prepr';
 
+import Typography from './components/typography';
+
 export default async function HomePage() {
   const { Page } = await PreprSdk.getPage({ slug: '/' });
   const { Blogs } = await PreprSdk.getBlogs({ limit: 3, sort: 'created_on_DESC' });
@@ -17,7 +19,11 @@ export default async function HomePage() {
         />
       )}
 
-      {Blogs?.items && <BlogsShowcase blogs={Blogs.items} title="The newest blogs" />}
+      {Blogs?.items.length ? (
+        <BlogsShowcase blogs={Blogs.items} title="The newest blogs" />
+      ) : (
+        <Typography>No blog posts found</Typography>
+      )}
     </>
   );
 }

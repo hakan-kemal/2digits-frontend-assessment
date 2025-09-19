@@ -3,6 +3,9 @@
 import { useState } from 'react';
 import type { FormEvent } from 'react';
 
+import DOMPurify from 'dompurify';
+import parse from 'html-react-parser';
+
 import Button from '@/app/components/button';
 import Typography from '@/app/components/typography';
 
@@ -28,7 +31,7 @@ export default function BlogSearch({ onSearch, placeholder, title }: BlogSearchP
 
       <form className="flex gap-6" onSubmit={handleSubmit}>
         <input
-          className="border-light-gray placeholder:text-light-gray flex-1 rounded border-2 px-4 py-3"
+          className="flex-1 rounded border-2 border-light-gray px-4 py-3 placeholder:text-light-gray"
           type="text"
           value={input}
           onChange={(e) => setInput(e.target.value)}

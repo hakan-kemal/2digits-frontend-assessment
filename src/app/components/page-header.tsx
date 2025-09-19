@@ -21,7 +21,7 @@ export default function PageHeader({ children, image, text, title, type }: PageH
 
   return (
     <div
-      className={`${typeClasses} relative flex w-screen flex-col items-center justify-center overflow-hidden bg-[rgba(0,0,0,0.5)]`}>
+      className={`${typeClasses} relative flex flex-col items-center justify-center overflow-hidden bg-[rgba(0,0,0,0.5)]`}>
       {image.url && (
         <Image
           className="-z-10 object-cover object-center"

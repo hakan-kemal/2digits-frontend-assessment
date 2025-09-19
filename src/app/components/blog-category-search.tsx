@@ -34,7 +34,7 @@ export default function BlogCategorySearchWrapper({ categories }: BlogCategorySe
   };
 
   return (
-    <div className="flex flex-col gap-4 px-4 md:px-20 lg:px-40 lg:pt-20">
+    <div className="flex flex-col gap-4 px-4 md:px-20 lg:my-12 lg:px-40">
       <Typography as="h3" weight="medium" className="mt-3">
         Search for blogs
       </Typography>
